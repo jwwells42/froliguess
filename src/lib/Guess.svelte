@@ -94,6 +94,7 @@
 
 	@media (max-width: 600px) {
         :global(body) {
+			max-width: 100vw;
 			width: 90%;
         }
 		h1 { 
