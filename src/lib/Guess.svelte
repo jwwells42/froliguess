@@ -1,6 +1,6 @@
 <script>
 	const answer = "covfefe"; // answer not gonna change so const not let
-	let input = $state(""); // the $state thing is called a "rune" in Svelte and it does magic for us
+	let input = $state(""); // the $ thing is called a "rune" in Svelte and it does magic for us
 	let before = $state([]); // $state rune itself mean when the variable changes it magics that change into your browser (reactivity)
 	let after = $state([]); // and the [] in there means we've got an array we can update 
 	let message = $state("");
