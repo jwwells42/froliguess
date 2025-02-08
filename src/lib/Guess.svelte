@@ -94,7 +94,7 @@
 
 	@media (max-width: 600px) {
         :global(body) {
-			width: 100%;
+			width: 90%;
             font-size: 1em;
         }
     }
