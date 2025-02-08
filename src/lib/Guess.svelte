@@ -88,6 +88,6 @@
 	}
 
 	form {
-		margin: 2% 0 2%; /* gives the input area some margin around it
+		margin: 2% 0 2%; /* gives the input area some margin around it */
 	}
 </style>
