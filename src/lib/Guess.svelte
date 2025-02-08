@@ -74,16 +74,16 @@
 
 	h1 {
 		text-shadow: 3px 3px 2px magenta;
-		font-size: 2em;
+		font-size: 2vw;
 	}
 
 	h2 {
-		font-size: 1.6em;
+		font-size: 1.4vw;
 	}
 
 	p {
 		margin: 0;
-		font-size: 1em;
+		font-size: 1vw;
 	}
 
 	form {
