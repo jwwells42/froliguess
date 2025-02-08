@@ -28,8 +28,7 @@
 	}
 </script>
 
-<h1>GUESS THE WORD WHICH MIGHT</h1>
-<h1>BE A MEME WORD POTENTIALLY</h1>
+<h1>GUESS THE WORD WHICH MIGHT BE A MEME WORD POTENTIALLY</h1>
 
 {#if before.length > 0} <!-- only show this if you've guessed something up here-->
 	<h2>ur word is after:</h2>
@@ -70,7 +69,8 @@
 		text-align: center;
 	}
 
-	h1, h2, p, form {
+	h1, h2, p {
+		width: 90%;
 		color: white;
 		margin: 0 auto;
 	}
