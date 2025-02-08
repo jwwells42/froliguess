@@ -67,20 +67,11 @@
 		background: black;
 		justify-content: center;
 		text-align: center;
-		width: 100vw;
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		overflow-x: hidden;
 	}
 
 	h1, h2, p {
-		width: 100%;
-		max-width: 100%;
 		color: white;
 		margin: 0 auto;
-		padding: 0 5%;
-		word-wrap: break-word;
 	}
 
 	h1 {
@@ -98,7 +89,6 @@
 
 	form {
 		margin: 2% 0 2%; /* gives the input area some margin around it */
-		padding: 0 5%;
 	}
 
 	@media (max-width: 600px) {
