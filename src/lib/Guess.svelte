@@ -67,7 +67,7 @@
 		background: black;
 		justify-content: center;
 		text-align: center;
-		width: 100%;
+		width: 100vw;
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
@@ -75,10 +75,12 @@
 	}
 
 	h1, h2, p {
-		width: 90%;
+		width: 100%;
+		max-width: 100%;
 		color: white;
 		margin: 0 auto;
 		padding: 0 5%;
+		word-wrap: break-word;
 	}
 
 	h1 {
