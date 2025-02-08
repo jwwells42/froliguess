@@ -67,12 +67,16 @@
 		background: black;
 		justify-content: center;
 		text-align: center;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
 	}
 
 	h1, h2, p {
 		width: 90%;
 		color: white;
 		margin: 0 auto;
+		padding: 0 5%;
 	}
 
 	h1 {
@@ -90,18 +94,22 @@
 
 	form {
 		margin: 2% 0 2%; /* gives the input area some margin around it */
+		padding: 0 5%;
 	}
 
 	@media (max-width: 600px) {
         :global(body) {
-			max-width: 90vw;
-			width: 90%;
+			max-width: 100vw;
+			width: 100%;
         }
 		h1 { 
-			font-size: 0.8em;
+			font-size: 1.5em;
 		}
 		h2, p, form {
-			font-size: 0.5em;
+			font-size: 1em;
+		}
+		input {
+			width: 80%;
 		}
     }
 </style>
