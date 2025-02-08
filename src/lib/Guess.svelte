@@ -95,7 +95,12 @@
 	@media (max-width: 600px) {
         :global(body) {
 			width: 90%;
-            font-size: 1em;
         }
+		h1 { 
+			font-size: 0.8em;
+		}
+		h2, p, form {
+			font-size: 0.5em;
+		}
     }
 </style>
