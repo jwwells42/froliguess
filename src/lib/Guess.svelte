@@ -73,8 +73,9 @@
 	}
 
 	h1 {
-		text-shadow: 3px 3px 2px magenta;
-		font-size: 2vw;
+		font-size: 2vw; /* vw is viewport width, so font size changes with your screen size */ 
+		text-shadow: 3px 3px 2px magenta; /* values are horizontal shadow, vertical shadow, blur effect, color */
+		
 	}
 
 	h2 {
@@ -87,6 +88,6 @@
 	}
 
 	form {
-		margin: 2% 0 2%;
+		margin: 2% 0 2%; /* gives the input area some margin around it
 	}
 </style>
