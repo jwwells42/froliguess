@@ -4,6 +4,7 @@
 	let before = $state([]); // $state rune itself mean when the variable changes it magics that change into your browser (reactivity)
 	let after = $state([]); // and the [] in there means we've got an array we can update 
 	let message = $state("");
+	let inputField;
 		  
 	function check() {	  
 		event.preventDefault(); // stop you from submitting blank 
@@ -27,7 +28,8 @@
 	}
 </script>
 
-<h1>GUESS THE WORD WHICH MIGHT BE A MEME WORD POTENTIALLY</h1>
+<h1>GUESS THE WORD WHICH MIGHT</h1>
+<h1>BE A MEME WORD POTENTIALLY</h1>
 
 {#if before.length > 0} <!-- only show this if you've guessed something up here-->
 	<h2>ur word is after:</h2>
@@ -37,7 +39,7 @@
 {/if}
   
 <form onsubmit={check}> <!-- when you submit the form it runs check() above in the script part-->
-	<input bind:value={input} /> <!-- bind:value is fancy svelte for when you change input, variable updates itself-->
+	<input bind:value={input} bind:this={inputField} /> <!-- bind:value is fancy svelte for when you change input, variable updates itself-->
 	<button type="submit">Submit</button>
 </form>
 
@@ -67,27 +69,33 @@
 		justify-content: center;
 		text-align: center;
 	}
-	
-	h1, h2, p {
+
+	h1, h2, p, form {
 		color: white;
+		margin: 0 auto;
 	}
 
 	h1 {
-		font-size: 2vw; /* vw is viewport width, so font size changes with your screen size */ 
+		font-size: 2em; /* vw is viewport width, so font size changes with your screen size */ 
 		text-shadow: 3px 3px 2px magenta; /* values are horizontal shadow, vertical shadow, blur effect, color */
 		
 	}
 
 	h2 {
-		font-size: 1.4vw;
+		font-size: 1.4em;
 	}
 
 	p {
-		margin: 0;
-		font-size: 1vw;
+		font-size: 1em;
 	}
 
 	form {
 		margin: 2% 0 2%; /* gives the input area some margin around it */
 	}
+
+	@media (max-width: 600px) {
+        :global(body) {
+            font-size: 1em;
+        }
+    }
 </style>
