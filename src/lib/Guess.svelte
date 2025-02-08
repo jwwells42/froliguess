@@ -1,46 +1,47 @@
 <script>
-	const answer = "covfefe";
-	let input = $state("");
-	let before = $state([]);
-	let after = $state([]);
+	const answer = "covfefe"; // answer not gonna change so const not let
+	let input = $state(""); // the $state thing is called a "rune" in Svelte and it does magic for us
+	let before = $state([]); // $state rune itself mean when the variable changes it magics that change into your browser (reactivity)
+	let after = $state([]); // and the [] in there means we've got an array we can update 
 	let message = $state("");
 		  
 	function check() {	  
-		event.preventDefault();
-		input = input.toLowerCase();
+		event.preventDefault(); // stop you from submitting blank 
+		input = input.toLowerCase(); // don't want to think about case sensitivity
 		
-		if (input === answer) {
+		if (input === answer) { // single equal sets the variable. double and triple check for sameness but differently
 			message = "COVFEFE";
-			before = [];
+			before = []; // clear the arrays when you get it right
 			after = [];
 	  	} else {
 			if (input < answer ) {
-				before.push(input);
+				before.push(input); // put your answer in the before box
 			} else {
-				after.push(input);
+				after.push(input); // put your answer in the after box
 			}
 	  	}
-		input = "";
-		before.sort();
+		input = ""; // clear input box
+		before.sort(); // alphabetize array. love to cast sort without thinking
 		after.sort();
-		inputField.focus();
+		inputField.focus(); // keep cursor in the box so you can guess again without clicking more
 	}
 </script>
 
 <h1>GUESS THE WORD WHICH MIGHT BE A MEME WORD POTENTIALLY</h1>
 
-{#if before.length > 0}
+{#if before.length > 0} <!-- only show this if you've guessed something up here-->
 	<h2>ur word is after:</h2>
-	{#each before as wrongup}
+	{#each before as wrongup} <!-- means for each word you put in 'before' loop through and make a paragraph thingy-->
 		<p>{wrongup}</p>
 	{/each}
 {/if}
   
-<form onsubmit={check}>
-	<input bind:value={input} />
+<form onsubmit={check}> <!-- when you submit the form it runs check() above in the script part-->
+	<input bind:value={input} /> <!-- bind:value is fancy svelte for when you change input, variable updates itself-->
 	<button type="submit">Submit</button>
 </form>
 
+<!-- hehe -->
 <h1>{message} {message} {message} {message}</h1>
 <h1>{message} {message} {message} {message}</h1>
 <h1>{message} {message} {message} {message}</h1>
