@@ -77,8 +77,7 @@
 
 	h1 {
 		font-size: 2em; /* vw is viewport width, so font size changes with your screen size */ 
-		text-shadow: 3px 3px 2px magenta; /* values are horizontal shadow, vertical shadow, blur effect, color */
-		
+		text-shadow: 3px 3px 2px magenta; /* values are horizontal shadow, vertical shadow, blur effect, color */	
 	}
 
 	h2 {
@@ -95,6 +94,7 @@
 
 	@media (max-width: 600px) {
         :global(body) {
+			width: 100%;
             font-size: 1em;
         }
     }
