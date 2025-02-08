@@ -67,9 +67,11 @@
 		background: black;
 		justify-content: center;
 		text-align: center;
+		width: 100%;
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
+		overflow-x: hidden;
 	}
 
 	h1, h2, p {
